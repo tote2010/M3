@@ -16,18 +16,13 @@ function echo(print, args) {
 }
 
 function ls(print) {
-    //const ar = fs.readdir(".", error, files);
     fs.readdir(".", (error, files) => {
         if (error) throw error;
         print(files.join(" "));
     });
-    //print(ar);
-
-    //print(ar);
 }
 
 function cat(print, args) {
-    //const data = fs.readFile(args, "utf-8", arror, data);
     fs.readFile(args, "utf-8", (error, data) => {
         if (error) throw error;
         print(data);       
@@ -35,7 +30,6 @@ function cat(print, args) {
 }
 
 function head(print, args) {
-    //const data = fs.readFile(args, "utf-8", arror, data);
     fs.readFile(args, "utf-8", (error, data) => {
         if (error) throw error;
         //const dataArr = data.split("\n").slice(0, 8).join("\n");
@@ -46,14 +40,12 @@ function head(print, args) {
 }
 
 function tail(print, args) {
-    //const data = fs.readFile(args, "utf-8", arror, data);
     fs.readFile(args, "utf-8", (error, data) => {
         if (error) throw new Error;
         //const dataArr = data.split("\n").slice(0, 8).join("\n");
         const dataArr = data.split("\n");
         print(dataArr.at(-1).trim());
     });
-    //print(data);
 }
 
 // function curl(print, args) {

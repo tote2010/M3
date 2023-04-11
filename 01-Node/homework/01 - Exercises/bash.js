@@ -17,19 +17,6 @@ function bash() {
 function print(output) {
    process.stdout.write(output);
    process.stdout.write("\nprompt > ");
-   // // process.stdin.on("data", (data) =>{
-   // //    var arg;
-   // // });
-
-   // // try {
-   // //    if(commands.cmd) {
-   // //       commands[cmd](print, args);
-   // //    } else {
-   // //       print("command not found: cmd");
-   // //    }
-   // // } catch {
-
-   // // }
 }
 
 bash();
